@@ -38,5 +38,10 @@ pipeline {
                 echo "Running Post Deployment Checks"
             }
         }
+        stage('Maven') {
+            steps {
+                sh 'mvn --version'
+            }
+        }
     }
 }
