@@ -55,6 +55,14 @@ pipeline {
             }
         }
         stage('Deploying To Prod') {
+            input {
+                message "Should we continue?"
+                ok "YES"
+                submitter "admin"
+                parameters {
+                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'YES or NO to proceed')
+                }
+            }
             steps {
                 sh 'echo Running On Prod'
             }
