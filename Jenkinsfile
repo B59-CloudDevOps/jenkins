@@ -38,7 +38,18 @@ pipeline {
                 echo "Running Post Deployment Checks"
             }
         }
-        stage('Maven') {
+        stage('Maven 396') {
+                tools {
+                    maven 'mvn396' 
+                }
+            steps {
+                sh 'mvn --version'
+            }
+        }
+        stage('Maven 399') {
+                tools {
+                    maven 'mvn399' 
+                }
             steps {
                 sh 'mvn --version'
             }
