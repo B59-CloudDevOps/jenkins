@@ -11,13 +11,16 @@ Installing Linux:
 Server Requirements:
     > t3.medium, spot , 30gb storage
 
-```
-sudo wget -O /etc/yum.repos.d/jenkins.repo \
-    https://pkg.jenkins.io/redhat-stable/jenkins.repo
-sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
-sudo yum upgrade -y 
-# Add required dependencies for the jenkins package
-sudo yum install fontconfig java-17-openjdk -y
-sudo yum install jenkins -y
-sudo systemctl daemon-reload
-```
+> Jenikins is all about jobs and we a job means the list of tasks to be executed.
+
+    Jenkins offers multiple types of jobs:
+        1) Freestyle jobs ( Options of the jobs are created manually )
+        2) Pipeline Jobs ( All the options are handled in the form of code) : Preferred and closed to GitOps Culture.
+
+> Jenkins run as a standalone server and cannot be operated as a CLUSTER. But we will diversify the jobs by running them on agents.
+
+    To run jobs on the top of a node/agent, agent should have java installed.
+
+Demonstrate adding workStation as an agent to the controller.
+
+> To write a pipeline, fileName should suffixed with Jenkinsfile
