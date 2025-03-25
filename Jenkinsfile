@@ -16,7 +16,7 @@ pipeline {
             }
             steps {
                 echo "Deploying the nodeJS App"
-                echo "Env Url is ${ENV_URL}"
+                echo "Stage Env Url is ${ENV_URL}"
             }
         }
         stage('Checks') {
