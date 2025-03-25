@@ -54,6 +54,28 @@ pipeline {
                 sh 'mvn --version'
             }
         }
+        stage('Parallel Stages') {
+            parallel {
+                stage('Unit Testing') {
+                    steps {
+                        sh 'echo Unit Testing'
+                        sh "sleep 100"
+                    }
+                }
+                stage('Integration Testing') {
+                    steps {
+                        sh 'echo Unit Testing'
+                        sh "sleep 100"
+                    }
+                }
+                stage('Functional Testing') {
+                    steps {
+                        sh 'echo Unit Testing'
+                        sh "sleep 100"
+                    }
+                }
+            }
+        }
         stage('Deploying To Prod') {
             input {
                 message "Should we continue?"

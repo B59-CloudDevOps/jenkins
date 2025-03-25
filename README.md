@@ -24,3 +24,6 @@ Server Requirements:
 Demonstrate adding workStation as an agent to the controller.
 
 > To write a pipeline, fileName should suffixed with Jenkinsfile
+
+Remembers, stages in jenkins are sequence in nature, STATE-1 will only be executed if the STAGE-1 is completed. 
+But, we can achive parallel processing using PARALLEL Stages.
