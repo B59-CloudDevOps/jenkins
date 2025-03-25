@@ -11,6 +11,9 @@ pipeline {
             }
         }
         stage('Deploying') {
+            environment {
+                ENV_URL = "pipeline.google.com"
+            }
             steps {
                 echo "Deploying the nodeJS App"
                 echo "Env Url is ${ENV_URL}"
