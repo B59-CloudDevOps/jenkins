@@ -11,5 +11,10 @@ pipeline {
                 echo "Deploying the nodeJS App"
             }
         }
+        stage('Checks') {
+            steps {
+                echo "Running Post Deployment Checks"
+            }
+        }
     }
 }
