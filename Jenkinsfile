@@ -54,5 +54,10 @@ pipeline {
                 sh 'mvn --version'
             }
         }
+        stage('Deploying To Prod') {
+            steps {
+                sh 'echo Running On Prod'
+            }
+        }
     }
 }
