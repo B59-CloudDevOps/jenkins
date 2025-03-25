@@ -7,10 +7,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Budling the nodeJS App"
-                echo "Env Url is ${ENV_URL}"
-                echo "Running env command"
-                env 
+                sh ''' 
+                    echo Budling the nodeJS App"
+                    echo "Env Url is ${ENV_URL}"
+                    echo "Running env command"
+                    env 
+                ''' 
             }
         }
         stage('Deploying') {
