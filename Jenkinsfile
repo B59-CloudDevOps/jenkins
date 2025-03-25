@@ -2,12 +2,15 @@ pipeline {
     agent any 
     environment {
         ENV_URL = "pipeline.google.com"
+        SSH_CRED = credentials('ssh-cred') 
     }
     stages {
         stage('Build') {
             steps {
                 echo "Budling the nodeJS App"
                 echo "Env Url is ${ENV_URL}"
+                echo "Running env command"
+                env 
             }
         }
         stage('Deploying') {
