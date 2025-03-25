@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh ''' 
-                    echo Budling the nodeJS App"
+                    echo "Budling the nodeJS App"
                     echo "Env Url is ${ENV_URL}"
                     echo "Running env command"
                     env 
