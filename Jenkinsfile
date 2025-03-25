@@ -12,7 +12,7 @@ pipeline {
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
     // triggers { cron('*/1 * * * *') } # Sample Change....
-    triggers { pollSCM('*/1 * * * *') }
+    // triggers { pollSCM('*/1 * * * *') }
     stages {
         stage('Build') {
             steps {
